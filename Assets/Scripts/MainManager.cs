@@ -128,11 +128,11 @@ public class MainManager : MonoBehaviour
         data.hightestScore = score;
 
         string json = JsonUtility.ToJson(data);
-        File.WriteAllText(Application.persistentDataPath + "/savefile.json", json);
+        File.WriteAllText(Application.persistentDataPath + "/savescore.json", json);
     }
     void LoadScore()
     {
-        string path = Application.persistentDataPath + "/savefile.json";
+        string path = Application.persistentDataPath + "/savescore.json";
 
         if (File.Exists(path))
         {
